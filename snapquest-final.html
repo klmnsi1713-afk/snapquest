@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapQuest | Photography Quest</title>
+    <link rel="stylesheet" href="snapquest-final.css">
+    <script src="snapquest-final.js" defer></script>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <a href="#top" class="logo">
+            <img src="images/web logo.svg" alt="SnapQuest Logo" class="logo-img">
+    
+    <div class="logo-text-stack">
+        <span class="logo-snap">SNAP</span>
+        <span class="logo-quest">QUEST</span>
+        <span class="logo-sub">PHOTOGRAPHY QUEST</span>
+    </div>
+</a>
+
+        <button id="menuToggle" class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+        <nav id="navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#photographs">Gallery</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#hunt">Evidence Hunt</a>
+            <a href="#puzzle">Puzzle</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            
+            <p class="tagline"><span class="tagline-icon">✦</span> MORE THAN A SNAP. IT'S A QUEST.</p>
+
+            <h1>Look Closer.<br>
+                Hunt Deeper.<br>
+                <span>Capture the Clues.</span>
+            </h1>
+
+            <p>
+                Every photograph holds a mystery and every detail is a clue.
+                Explore images, solve the challenges, and uncover the clues.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#photographs" class="main-button"><span aria-hidden="true">⌕</span> Start the Quest</a>
+                <a href="#about" class="text-link">Discover SnapQuest <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-note"><span class="status-dot"></span> LOOK • OBSERVE • DISCOVER</div>
+        </div>
+    </section>
+
+
+    <!-- PLAYER DASHBOARD -->
+    <section id="player-dashboard" class="player-dashboard">
+        <div class="dashboard-topline">
+            <div>
+                <p class="tagline">YOUR ADVENTURE STATUS</p>
+                <h2>Welcome, <span>Quester!</span></h2>
+                <p class="dashboard-intro">Every challenge brings you closer to mastering the art of observation.</p>
+            </div>
+            <button id="resetProgress" class="reset-progress" type="button">Reset progress ↻</button>
+        </div>
+
+        <div class="player-stats">
+            <article class="stat-card xp-card">
+                <span class="stat-icon">✦</span>
+                <div><small>TOTAL EXPERIENCE</small><strong><span id="totalXP">0</span> XP</strong></div>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon">▣</span>
+                <div><small>CURRENT RANK</small><strong id="playerRank">The Observer</strong></div>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon">✓</span>
+                <div><small>QUESTS CLEARED</small><strong id="questsCleared">0 / 3</strong></div>
+            </article>
+        </div>
+
+        <div class="overall-progress">
+            <div class="progress-label"><span>QUEST PROGRESS</span><strong id="overallProgressText">0%</strong></div>
+            <div class="progress-track"><span id="overallProgressBar"></span></div>
+        </div>
+
+        <div class="quest-map-heading">
+            <div><p class="tagline">CHOOSE YOUR PATH</p><h3>Quest Map</h3></div>
+            <span class="map-note">3 LEVELS • 1 ADVENTURE</span>
+        </div>
+        <div class="quest-map">
+            <a class="quest-node active" id="questNode1" href="#quiz">
+                <span class="node-number">01</span><span class="node-symbol">◈</span>
+                <span class="node-copy"><strong>The Observer</strong><small>Photography Quiz</small></span>
+                <span class="node-status" id="questStatus1">READY</span>
+            </a>
+            <a class="quest-node locked" id="questNode2" href="#hunt" aria-disabled="true">
+                <span class="node-number">02</span><span class="node-symbol">⌕</span>
+                <span class="node-copy"><strong>The Detail Detective</strong><small>Evidence Hunt</small></span>
+                <span class="node-status" id="questStatus2">LOCKED</span>
+            </a>
+            <a class="quest-node locked" id="questNode3" href="#puzzle" aria-disabled="true">
+                <span class="node-number">03</span><span class="node-symbol">▦</span>
+                <span class="node-copy"><strong>The Frame Master</strong><small>Photo Puzzle</small></span>
+                <span class="node-status" id="questStatus3">LOCKED</span>
+            </a>
+        </div>
+        <p class="dashboard-footnote">Complete each level to unlock the next challenge. Your XP and progress are saved on this device.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <p class="tagline">THE IDEA BEHIND THE QUEST</p>
+        <h2>What is <span>SnapQuest?</span></h2>
+
+        <p>
+            SnapQuest is an interactive photography website that combines
+            visual images with fun and educational games.
+            It invites users to take a pause, observe photographs carefully,
+            recognize visual elements, and uncover some details that seem to be unseen.
+        </p>
+    </section>
+
+    <!-- PHOTOGRAPHS -->
+    <section id="photographs" class="gallery-section">
+        <div class="section-heading">
+            <p class="tagline">EXPLORE THE COLLECTION</p>
+            <h2>Photography Gallery</h2>
+            <p>Discover the beauty hidden in ordinary things.</p>
+        </div>
+
+        <div class="gallery-container">
+            <article class="gallery-card">
+                <img src="images/texture.jpg.JPG" alt="bricks">
+                <span class="card-category">01 / TEXTURE</span>
+                <div class="gallery-card-copy"><h3>Unique Surfaces</h3>
+                <p>Discover how surfaces reveal their unique qualities.</p></div>
+            </article>
+
+            <article class="gallery-card">
+                <img src="images/details.jpg.JPG" alt="flower">
+                <span class="card-category">02 / DETAILS</span>
+                <div class="gallery-card-copy"><h3>Everyday Details</h3>
+                <p>Look closely at the little elements to an ordirnary photograph.</p></div>
+            </article>
+
+            <article class="gallery-card">
+                <img src="images/DSCF0180.JPG" alt="fruit">
+                <span class="card-category">03 / PATTERN</span>
+                <div class="gallery-card-copy"><h3>Patterns of Nature</h3>
+                <p>Explore patterns, lines, and textures.</p></div>
+            </article>
+
+            <article class="gallery-card">
+                <img src="images/perspective.jpg.jpg" alt="garden">
+                <span class="card-category">04 / PERSPECTIVE</span>
+                <div class="gallery-card-copy"><h3>Beyond the lens</h3>
+                <p>Look at familiar things from a new perspective.</p></div>
+            </article>
+        </div>
+        <p class="gallery-quest-note">Ready to play? Complete the three levels below and collect up to <strong>140 XP</strong>.</p>
+    </section>
+    
+    <!-- GAME IMAGE COLLECTION -->
+    <div id="gameImages" hidden>
+        <img src="images/texture2.jpg" alt="mushroom">
+        <img src="images/details2.jpg" alt="flower">
+        <img src="images/perspective2.JPG" alt="view">
+        <img src="images/pattern2.JPG" alt="leaves">
+    </div>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="game-section">
+        <div class="section-heading">
+            <p class="tagline"><span>✦</span> QUEST 01 / TEST YOUR EYE</p>
+            <h2>Photography Quiz</h2>
+            <p>Answer the questions and earn points!</p>
+        </div>
+
+        <div class="game-card quest-game-card" id="quizCard">
+            <div class="level-strip"><span>LEVEL 01</span><span class="reward-label">REWARD: 50 XP</span></div>
+            <div class="game-status-row"><span class="live-status" id="quizLevelStatus">● READY TO PLAY</span><span class="mini-score">XP: <strong id="quizEarned">0</strong> / 50</span></div>
+            <div class="mini-progress"><span id="quizProgressBar"></span></div>
+            <p id="quizProgress">Question 1 of 5</p>
+            <div class="game-kicker"><span class="game-icon">✦</span><span>VISUAL KNOWLEDGE CHALLENGE</span></div>
+            <h3 id="question">Loading question...</h3>
+
+            <div id="answers" class="answer-container"></div>
+
+            <p id="quizFeedback"></p>
+
+            <button id="nextQuestion" class="main-button" hidden>
+                Next Question
+            </button>
+
+            <h3 id="quizScore"></h3>
+            <button id="restartQuiz" class="secondary-button" hidden>
+                Try Again
+            </button>
+        </div>
+    </section>
+
+    <!-- EVIDENCE HUNT -->
+    <section id="hunt" class="game-section">
+        <div class="section-heading">
+            <p class="tagline"><span>⌕</span> QUEST 02 / FIND THE CLUE</p>
+            <h2>Evidence Hunt</h2>
+            <p>Can you find the correct area in the photograph?</p>
+        </div>
+
+        <div class="game-card quest-game-card" id="huntCard">
+            <div class="level-strip"><span>LEVEL 02</span><span class="reward-label">REWARD: 60 XP</span></div>
+            <div class="game-status-row"><span class="live-status" id="huntLevelStatus">🔒 COMPLETE LEVEL 01 FIRST</span><span class="mini-score">XP: <strong id="huntEarned">0</strong> / 60</span></div>
+            <div class="mini-progress"><span id="huntProgressBar"></span></div>
+            <div class="game-kicker"><span class="game-icon">⌕</span><span>SCANNING THE FRAME</span></div>
+            <h3>Find the Target Area!</h3>
+            <p class="round-counter" id="huntRound">ROUND 1 / 3</p>
+
+            <p id="huntClue">
+                Click the top-right section of the photograph.
+            </p>
+
+            <div class="hunt-grid" id="huntGrid">
+                <button data-zone="1">1</button>
+                <button data-zone="2">2</button>
+                <button data-zone="3">3</button>
+                <button data-zone="4">4</button>
+                <button data-zone="5">5</button>
+                <button data-zone="6">6</button>
+                <button data-zone="7">7</button>
+                <button data-zone="8">8</button>
+                <button data-zone="9">9</button>
+            </div>
+
+            <p id="huntFeedback">Choose a section to investigate.</p>
+            <p>Attempts: <strong id="huntAttempts">0</strong></p>
+
+            <button id="restartHunt" class="secondary-button">
+                Restart Hunt
+            </button>
+        </div>
+    </section>
+
+    <!-- PUZZLE -->
+    <section id="puzzle" class="game-section">
+        <div class="section-heading">
+            <p class="tagline"><span>▦</span> QUEST 03 / REBUILD THE SHOT</p>
+            <h2>Photo Puzzle</h2>
+            <p>Rearrange the tiles to complete the photograph.</p>
+        </div>
+
+        <div class="game-card quest-game-card" id="puzzleCard">
+            <div class="level-strip"><span>LEVEL 03</span><span class="reward-label">REWARD: 30 XP</span></div>
+            <div class="game-status-row"><span class="live-status" id="puzzleLevelStatus">🔒 COMPLETE LEVEL 02 FIRST</span><span class="mini-score">XP: <strong id="puzzleEarned">0</strong> / 30</span></div>
+            <div class="mini-progress"><span id="puzzleProgressBar"></span></div>
+            <div class="game-kicker"><span class="game-icon">▦</span><span>PIECE BY PIECE</span></div>
+            <h3>Complete the Picture</h3>
+
+            <div id="puzzleBoard" class="puzzle-board"></div>
+
+            <p class="round-counter" id="puzzleMoves">MOVES: 0</p>
+            <p id="puzzleFeedback">
+                Click two tiles to swap their positions.
+            </p>
+
+            <button id="shufflePuzzle" class="main-button">
+                Shuffle Puzzle
+            </button>
+        </div>
+    </section>
+
+
+    <!-- FINAL QUEST RESULTS -->
+    <section id="finalResults" class="final-results" hidden>
+        <div class="final-results-inner">
+            <p class="tagline">QUEST COMPLETE</p>
+            <div class="trophy-mark">✦</div>
+            <h2>You are a <span>Frame Master!</span></h2>
+            <p>You completed every SnapQuest challenge. You looked closer, found the clues, and brought the image together.</p>
+            <div class="final-score"><small>TOTAL EXPERIENCE EARNED</small><strong><span id="finalXP">0</span> XP</strong></div>
+            <div class="badge-row"><span>✦ THE OBSERVER</span><span>⌕ DETAIL DETECTIVE</span><span>▦ FRAME MASTER</span></div>
+            <a href="#player-dashboard" class="main-button">View My Adventure</a>
+        </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+     <section id="contact" class="contact-section">
+        <p class="tagline"><span>✦</span> YOUR NEXT DISCOVERY STARTS HERE</p>
+        <h2>Keep looking <span>closer.</span></h2>
+        <p>Thank you for taking the time to explore the details with us.</p>
+        <p>For more infos or collaboration, message <strong>snapteam17@gmail.com</strong> or send a message below:</p>
+    
+    <form action="https://web3forms.com" method="POST" id="contactForm" class="snapquest-contact-form">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="hidden" name="subject" value="New Message from SnapQuest Website!">
+
+        <div class="contact-row">
+            <div class="contact-field">
+                <label for="senderName">QUESTER NAME</label>
+                <input type="text" id="senderName" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="contact-field">
+                <label for="senderEmail">YOUR EMAIL</label>
+                <input type="email" id="senderEmail" name="email" placeholder="you@example.com" required>
+            </div>
+        </div>
+
+        <div class="contact-field">
+            <label for="senderMessage">MESSAGE / COLLABORATION</label>
+            <textarea id="senderMessage" name="message" rows="4" placeholder="Share your thoughts, feedback, or collaboration ideas..." required></textarea>
+        </div>
+
+        <button type="submit" id="sendEmailBtn" class="secondary-button">Send Message ↗</button>
+    </form>
+
+    <a href="#top" class="secondary-button">Back to the beginning ↑</a>
+</section>
+
+    <footer>
+        <h2>SNAP<span>QUEST</span></h2>
+        <p>Every picture has a story. Every detail is a clue.</p>
+        <p class="footer-mark">SNAPTEAM <span>✦</span></p>
+        <p>&copy; 2026 SnapQuest. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
